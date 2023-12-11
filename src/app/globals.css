@@ -10,9 +10,19 @@
   --grey: #D9D9D9;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1:not(.base-style),
+h2:not(.base-style),
+h3:not(.base-style),
+h4:not(.base-style),
+h5:not(.base-style),
+h6:not(.base-style) {
   background: linear-gradient(270deg, #EEE 0%, rgba(238, 238, 238, 0.00) 265%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: 'Inter', sans-serif;
+}
+
+div.hero-shadow-effect {
+  background: #D9D9D9;
+  box-shadow: 0px 4px 250px 105px rgba(55, 55, 55, 0.62);
 }
