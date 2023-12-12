@@ -16,7 +16,7 @@ const Header = () => {
             <div className="flex justify-between flex-row items-center my-6 col-start-2 col-end-6">
                 <HamburgerMenu hamburgerOpen={hamburgerOpen} handleHamburgerClick={handleHamburgerClick} />
                 <Link href={'/'}>
-                    <h1 className='p-2 cursor-pointer'>tu tienda</h1>
+                    <h1 className='p-2 cursor-pointer text-xl'>tu tienda</h1>
                 </Link>
                 <Link className='p-2' href='/cart'>
                     <CartIcon />
