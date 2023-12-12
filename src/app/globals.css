@@ -62,3 +62,7 @@ h6:not(.base-style) {
     transform: scaleX(1);
   }
 }
+
+.hero-gradiant {
+  background: linear-gradient(156deg, #000 7.21%, rgba(217, 217, 217, 0.00) 526.65%);
+}

@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation'
 const Sidenav = ({ hamburgerOpen, handleHamburgerClick }: { hamburgerOpen: boolean, handleHamburgerClick: () => void }) => {
     const router = useRouter()
     return (
-        <div className={`absolute flex p-8 flex-col bg-white lg:w-1/3 md:w-2/3 w-screen h-screen text-dark transition-all ${!hamburgerOpen && '-translate-x-full'}`}>
+        <div className={`absolute overflow-scroll flex p-8 flex-col bg-white lg:w-1/3 md:w-2/3 w-screen h-screen text-dark transition-all ${!hamburgerOpen && '-translate-x-full'}`}>
             <div className="w-fit">
                 <HamburgerMenu hamburgerOpen={hamburgerOpen} handleHamburgerClick={handleHamburgerClick} />
             </div>
