@@ -21,8 +21,3 @@ h6:not(.base-style) {
   -webkit-text-fill-color: transparent;
   font-family: 'Inter', sans-serif;
 }
-
-div.hero-shadow-effect {
-  background: #D9D9D9;
-  box-shadow: 0px 4px 250px 105px rgba(55, 55, 55, 0.62);
-}
