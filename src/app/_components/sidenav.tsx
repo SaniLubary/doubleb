@@ -4,8 +4,10 @@ import CartIcon from './cart-icon'
 import Button from './button'
 import Product from './product'
 import HamburgerMenu from './hamburger-menu'
+import { useRouter } from 'next/navigation'
 
 const Sidenav = ({ hamburgerOpen, handleHamburgerClick }: { hamburgerOpen: boolean, handleHamburgerClick: () => void }) => {
+    const router = useRouter()
     return (
         <div className={`absolute flex p-8 flex-col bg-white lg:w-1/3 md:w-2/3 w-screen h-screen text-dark transition-all ${!hamburgerOpen && '-translate-x-full'}`}>
             <div className="w-fit">
@@ -32,7 +34,7 @@ const Sidenav = ({ hamburgerOpen, handleHamburgerClick }: { hamburgerOpen: boole
                 </Link>
             </div>
             <div className="mt-4">
-                <Button variant='dark' text='Comprar Online' href='/products' />
+                <Button variant='dark' text='Comprar Online' onClick={() => router.push('/products')} />
             </div>
             <div className="mt-4">
                 <h3 className="text-2xl text-dark base-style">Ultimo Lanzamiento</h3>
