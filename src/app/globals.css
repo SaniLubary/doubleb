@@ -36,6 +36,10 @@ h6:not(.base-style) {
   -webkit-text-fill-color: pink;
 }
 
+.header {
+  background: rgba(7, 7, 7, 0.45);
+}
+
 .animate-mirror:nth-child(3) {
   animation-delay: 1s;
   -webkit-text-fill-color: orange;

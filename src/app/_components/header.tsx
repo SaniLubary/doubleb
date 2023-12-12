@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useLayoutEffect, useState } from 'react'
 import CartIcon from './cart-icon'
 import Link from 'next/link';
 import HamburgerMenu from './hamburger-menu';
 import Sidenav from './sidenav';
+import gsap from 'gsap';
 
 const Header = () => {
     const [hamburgerOpen, setHamburgerOpen] = useState(false);
@@ -12,7 +13,7 @@ const Header = () => {
     }
 
     return (
-        <div className='z-10 fixed w-full grid grid-cols-6 text-white'>
+        <div className='header z-10 fixed w-full grid grid-cols-6 text-white'>
             <div className="flex justify-between flex-row items-center my-6 col-start-2 col-end-6">
                 <HamburgerMenu hamburgerOpen={hamburgerOpen} handleHamburgerClick={handleHamburgerClick} />
                 <Link href={'/'}>

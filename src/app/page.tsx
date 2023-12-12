@@ -5,6 +5,10 @@ import Button from './_components/button';
 import Product from './_components/product';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const products = new Array(20).fill({
   image: '/assets/shirt.png',
@@ -55,13 +59,13 @@ export default function Page() {
         </div>
       </div>
       <div className="col-span-12 bg-dark grid grid-cols-6 text-grey gap-6 py-6">
-        <div className="flex flex-col col-start-2 col-end-3">
+        <div className="flex flex-col col-span-6 items-center lg:col-span-1 lg:col-start-2 lg:col-end-3">
           <h1 className='text-2xl'>Tu Empresa</h1>
           <h6>Location</h6>
           <h6>Argentina, Provincia, Ciudad</h6>
           <h6>Calle 123</h6>
         </div>
-        <div className="flex flex-col col-start-3 col-end-4">
+        <div className="flex flex-col col-span-6 items-center lg:col-span-1 lg:col-start-3 lg:col-end-4">
           <h6 className='text-xl'>Contacto</h6>
           <h6>+54 123 123123</h6>
           <h6>hola@empresa.com</h6>
@@ -71,7 +75,7 @@ export default function Page() {
             <div><Image width={24} height={24} alt='instagram logo' src={'/assets/facebook.png'} /></div>
           </div>
         </div>
-        <div className="flex flex-col justify-center items-end col-start-4 col-end-6">
+        <div className="flex flex-col justify-center items-center col-span-6 lg:col-span-1 lg:col-start-4 lg:col-end-6">
             <label htmlFor="emailBoletin" className='text-xl'>Unete a nuestro boletin informativo!</label>
             <div className='flex flex-row'>
               <input type="email" name="emailBoletin" id="emailBoletin" placeholder='Email' />
