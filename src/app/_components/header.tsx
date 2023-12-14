@@ -1,21 +1,18 @@
-import React, { useLayoutEffect, useState } from 'react'
+'use client'
+
+import React, { useState } from 'react'
 import CartIcon from './cart-icon'
 import Link from 'next/link';
 import HamburgerMenu from './hamburger-menu';
 import Sidenav from './sidenav';
-import gsap from 'gsap';
+import { useSidenav } from '../hooks/useSidenav';
 
 const Header = () => {
-    const [hamburgerOpen, setHamburgerOpen] = useState(false);
-
-    const handleHamburgerClick = () => {
-        setHamburgerOpen(!hamburgerOpen)
-    }
-
+    const {isSidenavOpen, toogleSidenav}= useSidenav()
     return (
         <div className='header z-10 fixed w-full grid grid-cols-6 text-white'>
             <div className="flex justify-between flex-row items-center my-6 col-start-2 col-end-6">
-                <HamburgerMenu hamburgerOpen={hamburgerOpen} handleHamburgerClick={handleHamburgerClick} />
+                <HamburgerMenu hamburgerOpen={isSidenavOpen} handleHamburgerClick={toogleSidenav} />
                 <Link href={'/'}>
                     <h1 className='p-2 cursor-pointer text-xl'>tu tienda</h1>
                 </Link>
@@ -23,7 +20,7 @@ const Header = () => {
                     <CartIcon />
                 </Link>
             </div>
-            <Sidenav hamburgerOpen={hamburgerOpen} handleHamburgerClick={handleHamburgerClick} />
+            <Sidenav hamburgerOpen={isSidenavOpen} handleHamburgerClick={toogleSidenav} />
         </div>
 
     )

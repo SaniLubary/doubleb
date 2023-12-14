@@ -64,5 +64,10 @@ h6:not(.base-style) {
 }
 
 .hero-gradiant {
-  background: linear-gradient(156deg, #000 7.21%, rgba(217, 217, 217, 0.00) 526.65%);
+  background: linear-gradient(156deg, #000 24.92%, rgba(97, 97, 97, 0.00) 528.42%);
+}
+
+.shape {
+  float:right;
+    shape-outside: ellipse();
 }

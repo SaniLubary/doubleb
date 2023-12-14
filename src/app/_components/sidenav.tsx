@@ -16,18 +16,18 @@ const Sidenav = ({ hamburgerOpen, handleHamburgerClick }: { hamburgerOpen: boole
             <div className='flex flex-col mt-4'>
                 <input name='search-button' placeholder='Busca un producto' id='search-button' className='bg-grey py-2 px-4 rounded' type="text" />
             </div>
-            <div className="mt-4">
+            <Link href={'#category'} onClick={handleHamburgerClick} className="mt-4">
                 Categorias
-            </div>
-            <div className="mt-4">
+            </Link>
+            <Link href={'/contact'} onClick={handleHamburgerClick} className="mt-4">
                 Contacto
-            </div>
-            <div className="mt-4">
+            </Link>
+            <Link href={'/about-us'} onClick={handleHamburgerClick} className="mt-4">
                 Sobre Nosotros
-            </div>
-            <div className="mt-4">
+            </Link>
+            <Link href={'/qna'} onClick={handleHamburgerClick} className="mt-4">
                 Preguntas Frecuentes
-            </div>
+            </Link>
             <div className="w-fit mt-4">
                 <Link className='p-2' href='/cart'>
                     <CartIcon fill='black' />

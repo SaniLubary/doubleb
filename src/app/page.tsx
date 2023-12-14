@@ -1,6 +1,6 @@
 "use client"
+
 import Image from 'next/image'
-import Header from './_components/header';
 import Button from './_components/button';
 import Product from './_components/product';
 import { useEffect, useState } from 'react';
@@ -31,13 +31,12 @@ export default function Page() {
   useEffect(() => {
     changeState()
   }, [])
-  
+
   return (
-    <main className="grid grid-cols-12 overflow-hidden">
-      <Header />
+    <>
       <div className="hero-gradiant col-span-12 bg-dark text-white grid grid-cols-6 relative overflow-hidden gap-6">
         <div className="col-start-2 col-end-6 md:col-end-4 mt-32 mb-64 md:mb-24">
-          <h1 className='lg:text-6xl text-2xl sm:max-md:w-1/2 sm:text-2xl md:text-3xl font-bold transition-all' onMouseEnter={changeState}>RED<span className={`${animateMirror && 'animate-mirror'} transition-all inline-block`}>E</span>FINI<span className={`${animateMirror && 'animate-mirror'} transition-all inline-block`}>MO</span>S EL <span className={`${animateMirror && 'animate-mirror'} transition-all inline-block`}>R</span>UBRO</h1>
+          <h1 className='break-normal lg:text-6xl text-2xl sm:max-md:w-1/2 sm:text-2xl md:text-3xl font-bold transition-all' onMouseEnter={changeState}>RED<span className={`${animateMirror && 'animate-mirror'} transition-all inline-block`}>E</span>FINI<span className={`${animateMirror && 'animate-mirror'} transition-all inline-block`}>MOS</span> EL <span className={`${animateMirror && 'animate-mirror'} transition-all inline-block`}>RUBRO</span></h1>
           <h3 className='mt-4 text-sm sm:max-md:w-1/2'>Tu tienda llega para redefinir tu rubro con tus productos increibles</h3>
           <div className="mt-4 text-sm">
             <Button text='Ver Productos' onClick={() => router.push('/products')} />
@@ -62,33 +61,6 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="col-span-12 bg-dark grid grid-cols-6 text-grey gap-6 py-6">
-        <div className="flex flex-col col-span-6 items-center lg:col-span-1 lg:col-start-2 lg:col-end-3">
-          <h1 className='text-2xl'>Tu Empresa</h1>
-          <h6>Location</h6>
-          <h6 className='text-center'>Argentina, Provincia, Ciudad</h6>
-          <h6>Calle 123</h6>
-        </div>
-        <div className="flex flex-col col-span-6 items-center lg:col-span-1 lg:col-start-3 lg:col-end-4">
-          <h6 className='text-xl'>Contacto</h6>
-          <h6>+54 123 123123</h6>
-          <h6>hola@empresa.com</h6>
-          <div className='flex mt-4 items-center'>
-            <div className='mr-4'><Image width={24} height={24} alt='instagram logo' src={'/assets/instagram.png'} /></div>
-            <div className='mr-4 bg-white p-1 rounded'><Image width={24} height={24} alt='instagram logo' src={'/assets/x.png'} /></div>
-            <div><Image width={24} height={24} alt='instagram logo' src={'/assets/facebook.png'} /></div>
-          </div>
-        </div>
-        <div className="flex flex-col justify-center items-center col-span-6 lg:col-span-1 lg:col-start-4 lg:col-end-6">
-            <label htmlFor="emailBoletin" className='text-xl'>Unete a nuestro boletin informativo!</label>
-            <div className='flex flex-row'>
-              <input type="email" name="emailBoletin" id="emailBoletin" placeholder='Email' />
-              <div className="ml-6">
-                <Button text='Agregame!' onClick={() => console.log('submit')} />
-              </div>
-            </div>
-        </div>
-      </div>
-    </main>
+    </>
   )
 }
