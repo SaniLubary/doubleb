@@ -20,7 +20,7 @@ const Breadcrumbs = () => {
 
     
     return (
-        <div className="col-start-2 col-end-6">
+        <div className="col-start-2 col-end-7">
             <Link href={'/'}>Inicio</Link>&nbsp;/&nbsp;
             {paramKeys.map((val: string, i) => {
                 console.log(val)

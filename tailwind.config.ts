@@ -11,6 +11,8 @@ const config: Config = {
       dark: 'var(--dark)',
       white: 'var(--white)',
       grey: 'var(--grey)',
+      yellow: 'var(--yellow)',
+      red: 'var(--red)',
     }
   },
   plugins: [],
